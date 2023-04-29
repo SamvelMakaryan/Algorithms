@@ -2,36 +2,29 @@
 
 template <typename T>
 void merge(T* arr, int left, int mid, int right) {
-	int n1 = mid - left + 1;
-	int n2 = right - mid;
-	T* arr1 = new T [n1];
-	T* arr2 = new T [n2];
-	for (int i = 0; i < n1; ++i) {
-		arr1[i] = arr[left + i];
-	}
-	for (int i = 0; i < n2; ++i) {
-		arr2[i] = arr[mid + 1 + i];
-	}
-	int i = 0;
-	int j = 0;
-	int k = left;
-	while (i < n1 && j < n2) {
-		if (arr1[i] >= arr2[j]) {
-			arr[k] = arr2[j++];
+	T* tmp = new T [right - left + 1];
+	int i = left;
+	int j = mid + 1;
+	int k = 0;
+	while (i <= mid && j <= right) {
+		if (arr[i] <= arr[j]) {
+			tmp[k] = arr[i++];
 		}
 		else {
-			arr[k] = arr1[i++];
+			tmp[k] = arr[j++];
 		}
 		++k;
 	}
-	while (i < n1) {
-		arr[k++] = arr1[i++];
+	while (i <= mid) {
+		tmp[k++] = arr[i++];
 	}
-	while(j < n2) {
-		arr[k++] = arr2[j++];
+	while(j <= right) {
+		tmp[k++] = arr[j++];
 	}
-	delete[] arr1;
-	delete[] arr2;
+	for (int i = 0; i < right - left + 1; ++i) {
+		arr[i + left] = tmp[i];
+	}
+	delete[] tmp;
 }
 
 template <typename T>
