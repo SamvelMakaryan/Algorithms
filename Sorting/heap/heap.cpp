@@ -34,3 +34,5 @@ int main() {
 		std::cout << i << "  ";
 	}
 }
+//Time complexity O(n logn)
+//Space complexity O(1)
