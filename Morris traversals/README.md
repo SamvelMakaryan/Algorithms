@@ -1,1 +1,1 @@
-These are James H.Morris algorithms for DFS traversing binary trees implemented in C++.
+These are James H.Morris algorithms for DFS traversing binary trees.
