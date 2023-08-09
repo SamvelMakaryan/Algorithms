@@ -27,6 +27,7 @@ void sort(T arr, int n) {
         heapify(arr, i, 0);
     }
 }
+
 int main() {
     int arr[] = {5, 1, -4, 2, 19, -8, 7, 31, 2, 6};
 	sort(arr, 10);

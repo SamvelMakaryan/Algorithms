@@ -18,7 +18,7 @@ void merge(T* arr, int left, int mid, int right) {
 	while (i <= mid) {
 		tmp[k++] = arr[i++];
 	}
-	while(j <= right) {
+	while (j <= right) {
 		tmp[k++] = arr[j++];
 	}
 	for (int i = 0; i < right - left + 1; ++i) {
@@ -29,16 +29,13 @@ void merge(T* arr, int left, int mid, int right) {
 
 template <typename T>
 void sort(T arr, int left, int right) {
-	if (left >= right) {
-		return;
+	if (left < right) {
+		int mid = left + (right - left) / 2;
+		sort(arr, left, mid);
+		sort(arr, mid + 1, right);
+		merge(arr, left, mid, right);
 	}
-	int mid = left + (right - left) / 2;
-	sort(arr, left, mid);
-	sort(arr, mid + 1, right);
-	merge(arr, left, mid, right);
 }
-
-
 
 int main() {
 	int arr[] = {32, 45, 6, 7, -8, 7, 55, 2, 11, 20};
