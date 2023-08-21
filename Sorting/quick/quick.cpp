@@ -1,28 +1,24 @@
 #include <iostream>
 
 template <typename T>
-void sort(T arr, int left, int right) {
-	int i = left;
-	int j = right;
-	int pivot = arr[left + (right - left) / 2];
-	while (i <= j) {
-		while (arr[i] < pivot) {
-			++i;
+void sort(T* arr, int left, int right) {
+	if (left < right) {
+		int i = left;
+		int j = right;
+		T pivot = arr[left + (right - left) / 2];
+		while (i <= j) {
+			while (arr[i] < pivot) {
+				++i;
+			}
+			while (arr[j] > pivot) {
+				--j;
+			}
+			if (i <= j) {
+				std::swap(arr[i++], arr[j--]);
+			}
 		}
-		while (arr[j] > pivot) {
-			--j;
-		}
-		if (i <= j) {
-			std::swap(arr[i], arr[j]);
-			++i;
-			--j;
-		}	
-		if (left < j) {
-			sort(arr, left, j);
-		}
-		if (i < right) {
-			sort(arr, i, right);
-		}
+		sort(arr, left, j);
+		sort(arr, i, right);
 	}
 }
 
