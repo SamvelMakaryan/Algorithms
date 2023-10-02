@@ -1,0 +1,1 @@
+This is implementation of Arthur B. Kahn's algorithm. It returns vertexes in topologicaly sorted or if graph has cycle throws exception.
