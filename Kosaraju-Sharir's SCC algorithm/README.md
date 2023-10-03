@@ -1,0 +1,1 @@
+This is  S. Rao Kosaraju's and Micha Sharir's algorithm for finding strongly connected components in DAG.
