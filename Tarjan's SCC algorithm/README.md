@@ -1,0 +1,1 @@
+This is implementation of Robert Tarjan's algorithm for finding strongly connected components in DAG.

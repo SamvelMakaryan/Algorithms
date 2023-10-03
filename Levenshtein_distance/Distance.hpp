@@ -29,6 +29,6 @@ int distance(const std::string& word1, const std::string& word2) {
 
 //Time complexity O(m * n)
 //Space complexity O(m * n)
-//where m is sie of word1 and n is size of word2 
+//where m is size of word1 and n is size of word2 
 
 #endif //DISTANCE_HPP_

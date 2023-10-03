@@ -35,4 +35,9 @@ std::vector<int> topSort(std::vector<std::vector<int>>& adj) {
     return sorted;
 }
 
+//Time complexity O(V + E)
+//Space complexity O(V)
+//Where V is number of vertexes and E is number of edges
+
+
 #endif //TOPOLOGICAL_SORT_HPP_
