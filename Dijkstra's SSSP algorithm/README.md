@@ -1,0 +1,2 @@
+This is Edsger W. Dijkstra Single Source Shortest Path algorithm implemented for adjacency list representations.
+It returns vector where every indexes value is the sum of weights to that vertex, if no source detected the value is INT_MAX.
