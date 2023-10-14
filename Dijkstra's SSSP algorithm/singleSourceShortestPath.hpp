@@ -5,7 +5,7 @@
 #include <limits>
 #include <queue>
 
-    std::vector<int> singleSourceSHortestPath(int src, std::vector<std::vector<int>> graph) {
+    std::vector<int> singleSourceSHortestPath(int src, std::vector<std::vector<std::pair<int, int>>> graph) {
 		std::vector<int> distance(graph.size(), std::numeric_limits<int>::max());
 		distance[src] = 0;
 		auto comparator = [](const auto& p1, const auto& p2){return p1.first < p2.first;};
@@ -26,5 +26,9 @@
 		}
 		return distance;
 	}
+
+//Time complexity O((V + E) * log(V))
+//Space complexity O(V)
+//Where V is number of vertexes and E is number of edges
 
 #endif //SINGLESOURCESHORTESTPATH_HPP_
