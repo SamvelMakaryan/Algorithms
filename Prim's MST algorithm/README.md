@@ -1,0 +1,1 @@
+This is implementation of Robert C. Prim's algorithm for finding the weight of minimum spanning tree.
