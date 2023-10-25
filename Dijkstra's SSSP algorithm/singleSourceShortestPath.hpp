@@ -8,7 +8,7 @@
     std::vector<int> singleSourceSHortestPath(int src, std::vector<std::vector<std::pair<int, int>>> graph) {
 		std::vector<int> distance(graph.size(), std::numeric_limits<int>::max());
 		distance[src] = 0;
-		auto comparator = [](const auto& p1, const auto& p2){return p1.first < p2.first;};
+		auto comparator = [](const auto& p1, const auto& p2){return p1.second < p2.second;};
 		std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, decltype(comparator)> pq(comparator);
 		pq.push({src, 0}); 
 		while (!pq.empty()) {
