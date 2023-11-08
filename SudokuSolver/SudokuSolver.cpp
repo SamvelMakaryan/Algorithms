@@ -47,8 +47,8 @@ bool sudokuSolver(std::vector<std::vector<int>>& board) {
 
 void printBoard(const std::vector<std::vector<int>>& board) {
     std::cout << std::endl;
-    for (int i = 0; i < board.size(); ++i) {
-        for (int j = 0; j < board.size(); ++j) {
+    for (int i = 0; i < boardSize; ++i) {
+        for (int j = 0; j < boardSize; ++j) {
             std::cout << board[i][j] << " ";
             if ((j + 1) % cubeSize == 0) {
                 std::cout << " ";
